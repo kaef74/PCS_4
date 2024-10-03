@@ -65,3 +65,7 @@ List<Figure> figures = [
     material: 'Винил',
   ),
 ];
+
+void removeFigure(Figure figure) {
+  figures.remove(figure);
+}
