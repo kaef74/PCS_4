@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import '../models/note.dart';
 
 class ProductDetailPage extends StatelessWidget {
-  final Sweet sweet;
+  final Figure figure;
 
-  const ProductDetailPage({super.key, required this.sweet});
+  const ProductDetailPage({super.key, required this.figure});
   final textFont = const TextStyle(fontSize: 20);
 
   @override
@@ -13,7 +13,7 @@ class ProductDetailPage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Text(sweet.name),
+        title: Text(figure.name),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(10.0),
@@ -21,7 +21,7 @@ class ProductDetailPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.network(
-              sweet.imageUrl,
+              figure.imageUrl,
               fit: BoxFit.cover,
               width: double.infinity,
               height: MediaQuery.of(context).size.height * 0.4,
@@ -30,35 +30,35 @@ class ProductDetailPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                sweet.description,
+                figure.description,
                 style: textFont,
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                'Цена: ${sweet.price} рублей',
+                'Цена: ${figure.price} рублей',
                 style: textFont,
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                'Бренд: ${sweet.brand}',
+                'Бренд: ${figure.brand}',
                 style: textFont,
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                'Вкус: ${sweet.flavor}',
+                'Серия: ${figure.series}',
                 style: textFont,
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                'Состав: ${sweet.ingredients}',
+                'Материал: ${figure.material}',
                 style: textFont,
               ),
             ),

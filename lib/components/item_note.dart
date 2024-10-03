@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../models/note.dart';
-import '../pages/note_page.dart';
 
 class Item extends StatelessWidget {
-  final Sweet sweet;
+  final Figure figure;
 
-  const Item({super.key, required this.sweet});
+  const Item({super.key, required this.figure});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +17,7 @@ class Item extends StatelessWidget {
         child: Row(
           children: [
             Image.network(
-              sweet.imageUrl,
+              figure.imageUrl,
               width: 100,
               height: 100,
               fit: BoxFit.cover,
@@ -29,14 +28,14 @@ class Item extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    sweet.name,
+                    figure.name,
                     style: const TextStyle(
                         fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 10),
-                  Text(sweet.description),
+                  Text(figure.description),
                   const SizedBox(height: 10),
-                  Text('Цена: ${sweet.price} рублей'),
+                  Text('Цена: ${figure.price} рублей'),
                 ],
               ),
             ),
